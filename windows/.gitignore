@@ -1,0 +1,10 @@
+node_modules/
+work/
+native/*.dll
+native/*.lib
+native/*.pdb
+native/*.a
+dist/
+smoke-result.json
+smoke.png
+tests/results.json

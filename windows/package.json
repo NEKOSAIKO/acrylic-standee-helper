@@ -1,0 +1,18 @@
+{
+  "name": "acrylic-standee-windows",
+  "version": "0.1.0-preview.1",
+  "private": true,
+  "description": "亚克力立牌助手 Windows 预览版",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node tests/core.cjs",
+    "package": "node package.cjs"
+  },
+  "dependencies": {
+    "koffi": "2.15.1"
+  },
+  "devDependencies": {
+    "electron": "44.2.0"
+  }
+}

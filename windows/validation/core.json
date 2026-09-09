@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-09T07:30:11.256Z",
+  "platform": "win32",
+  "arch": "x64",
+  "checks": [
+    "主体闭合，真实毫米高度，插脚不合并",
+    "参考框顶部额外延展 3 mm，底部和主体不变",
+    "双插脚参考独立且不修改主体",
+    "换图不复用旧透明度缓存",
+    "全透明输入返回明确错误",
+    "底座插槽按厚度，非插入深度计算",
+    "越界底座插槽被拒绝",
+    "修正后的插槽不能为零或负"
+  ],
+  "sample": {
+    "heightMm": 150,
+    "widthMm": 83.117035
+  },
+  "upstream": {
+    "acrylic-geometry.js": "d19b64d43cabeba523d81eda82e4f7789ce24ca4779255a66ba01d43213448b0",
+    "curve-fit.js": "e66725e696e7a70d1c072727b3fa1c99a0c3c0e3f2c47b91fb52df66697fca22",
+    "NativeGeometry.cpp": "4644cf530852994e2fe4c0009575d269d7e19229f17f6ce5cc8b3d26a41405e1",
+    "NativeGeometry.h": "1faa979a3cbd3a0d1c8ddd7e1fa3ce4ac3f08f42b57b5936150955a57933e14e",
+    "illustrator-helper.jsx": "408d8c12588306f7ced1af3121eeb8cb1632e440da078edc25ca3e3c4359585a"
+  }
+}
