@@ -1,0 +1,5 @@
+const {baseLayout}=require('./ui/layout.js');
+function rect(x,y,w,h,r=0){r=Math.min(r,w/2,h/2);if(!r)return `M ${x} ${y} H ${x+w} V ${y+h} H ${x} Z`;return `M ${x+r} ${y} H ${x+w-r} Q ${x+w} ${y} ${x+w} ${y+r} V ${y+h-r} Q ${x+w} ${y+h} ${x+w-r} ${y+h} H ${x+r} Q ${x} ${y+h} ${x} ${y+h-r} V ${y+r} Q ${x} ${y} ${x+r} ${y} Z`;}
+function ellipse(w,h){const x=w/2,y=h/2,k=.5522847498307936;return `M ${w} ${y} C ${w} ${y+y*k} ${x+x*k} ${h} ${x} ${h} C ${x-x*k} ${h} 0 ${y+y*k} 0 ${y} C 0 ${y-y*k} ${x-x*k} 0 ${x} 0 C ${x+x*k} 0 ${w} ${y-y*k} ${w} ${y} Z`;}
+function layout(g,s){const base=baseLayout(g,s),margin=10,gap=20,b=g.bounds;return {bodyX:margin-b.x,bodyY:margin-b.y,baseX:margin+b.width+gap,baseY:margin+Math.max(0,(b.height-base.height)/2),pageWidth:margin*2+b.width+gap+base.width,pageHeight:margin*2+Math.max(b.height,base.height),basePath:s.baseShape==='circle'?ellipse(base.width,base.height):rect(0,0,base.width,base.height,3),slots:base.slots.map(t=>rect(t.x,t.y,t.width,t.height,t.radius)),tabs:g.tabs.map(t=>rect(t.x,t.y,t.width,t.height)),base};}
+module.exports={layout,rect,ellipse};

@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "checks": [
+    "six PDF pages",
+    "page 1 millimetres",
+    "page 2 millimetres",
+    "page 3 millimetres",
+    "page 4 millimetres",
+    "page 5 millimetres",
+    "page 6 millimetres",
+    "original artwork pixel dimensions",
+    "four-channel CMYK ICC image",
+    "identified SWOP profile, not an assumed name",
+    "embedded ICC checksum",
+    "artwork original alpha preserved",
+    "white uses DeviceCMYK",
+    "white is exactly C0 M0 Y0 K100",
+    "PDF retains exact completed white mask",
+    "white mask uses original pixels",
+    "automatic white threshold formula",
+    "AI has two PDF-compatible artboards",
+    "AI has Illustrator private data",
+    "Illustrator reopen inspection passed",
+    "Illustrator round-trip preserves every mask byte and active K100 pixel"
+  ],
+  "sourcePixels": [
+    1114,
+    1500
+  ],
+  "pdfICC": "Agfa : Swop Standard",
+  "aiICC": "Japan Color 2001 Coated",
+  "whiteMaskSha256": "093203205fc06ba227dc8e4f89f937cbaecb1e271dd9daffaad697b66cb5a8fd"
+}

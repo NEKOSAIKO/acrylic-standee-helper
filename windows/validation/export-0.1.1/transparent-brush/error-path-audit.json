@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "checks": [
+    "pdf rejects overwrite and retains original bytes",
+    "ai rejects overwrite and retains original bytes",
+    "unsupported whiteInset rejected",
+    "unsupported whiteFill rejected",
+    "unsupported whiteVector rejected",
+    "merged tab geometry rejected"
+  ]
+}

@@ -8,3 +8,5 @@ dist/
 smoke-result.json
 smoke.png
 tests/results.json
+export-smoke-error.json
+validation-export/

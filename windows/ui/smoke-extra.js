@@ -1,4 +1,5 @@
 // Runs only when explicitly invoked by the desktop --smoke harness.
+window.makeExportSmokePayload=async(brush=false)=>{if(brush){const c=document.createElement('canvas');c.width=96;c.height=128;const x=c.getContext('2d');x.fillStyle='#f34b52';x.fillRect(12,12,72,104);x.fillStyle='#306ddd';x.fillRect(12,76,36,40);x.fillStyle='#29b678';x.fillRect(48,76,36,40);x.clearRect(34,48,28,28);x.clearRect(16,20,64,16);for(let i=0;i<64;i++){x.fillStyle=`rgba(30,30,30,${i/63})`;x.fillRect(16+i,20,1,16);}await load({name:'半透明与补白验收.png',data:c.toDataURL()});strokes=[{points:[{x:.5,y:.48},{x:.58,y:.52}],radius:.055}];settings.tabCount=2;settings.tabWidth=14;settings.baseWidth=95;await compute();}else await load(await desktop.sample());$('jobName').value=brush?'半透明 / 补白 / 双插脚验收':'Windows 导出验收 · 示例立牌';$('notes').value='独立插脚参考框；白墨 K100；本文件用于 Windows 导出功能验收。';return exportPayload();};
 window.runExtendedSmoke=async()=>{
  const checks=[];const assert=(ok,msg)=>{if(!ok)throw Error(msg);checks.push(msg);};
  const wait=async fn=>{const start=Date.now();while(!fn()){if(Date.now()-start>15000)throw Error('后台蒙版等待超时');await new Promise(r=>setTimeout(r,20));}};
